@@ -1,0 +1,94 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+:host {
+    font-family: "Roboto";
+}
+
+p {
+    font-size: 14px;
+}
+
+.header-md {
+    &::after {
+        background-image: unset;
+    }
+}
+
+ion-header {
+
+    ion-title {
+        font-size: 18px;
+        font-weight: 500;
+        // padding-left: 16px;
+        // text-align: left;
+    }
+}
+
+.header-ios {
+    ion-toolbar {
+        &:last-of-type {
+            --border-width: 0;
+            --background: transparent;
+        }
+    }
+}
+
+.theme-list-view {
+    ion-item {
+        background-color: #fff;
+        margin: 10px 20px 20px 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px -5px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 8px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 8px -5px rgba(0, 0, 0, 0.75);
+
+        ion-label {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+
+            .amount {
+                font-weight: 600;
+
+                ion-icon {
+                    color: green;
+
+                    &[name="arrow-up-outline"] {
+                        color: red;
+                    }
+                }
+            }
+
+            .date {
+                font-size: 14px;
+                color: #ababab;
+            }
+        }
+    }
+}
